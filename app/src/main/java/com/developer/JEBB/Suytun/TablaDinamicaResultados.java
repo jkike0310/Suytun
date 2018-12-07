@@ -1,4 +1,4 @@
-package com.developer.adrianbalam.simsoft;
+package com.developer.JEBB.Suytun;
 
 import android.content.Context;
 import android.view.Gravity;
