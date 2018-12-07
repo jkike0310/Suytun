@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ResultadosActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlDatos"
+        android:layout_width="359dp"
+        android:layout_height="146dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp">
+
+        <TextView
+            android:id="@+id/tvIngresarItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Variable de observación"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/llDatoTiempo"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tiempo"
+                android:textColor="@android:color/background_light"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etTiempo"
+                android:layout_width="145dp"
+                android:layout_height="45dp"
+                android:hint="               -----"
+                android:inputType="text"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAddItem"
+            android:layout_width="292dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/holo_red_light"
+            android:onClick="addNuevoDato"
+            android:text="Ejecutar"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tituloResultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="224dp"
+        android:text="TABLA DE RESULTADOS"
+        android:textColor="@android:color/background_light"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tituloResultados">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tablaResultados"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="79dp"
+        android:layout_height="114dp"
+        android:layout_above="@+id/rlDatos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-82dp"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+</RelativeLayout>
